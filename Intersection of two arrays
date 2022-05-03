@@ -1,0 +1,10 @@
+#Intersection of two arrays
+
+class Solution:
+    def NumberofElementsInIntersection(self,a, b, n, m):
+        
+       #code here
+       a=set(a)
+       b=set(b)
+       z=a.intersection(b)
+       return len(z)
