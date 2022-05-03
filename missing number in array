@@ -1,0 +1,10 @@
+#MISSING NUMBER IN ARRAY
+
+class Solution:
+    def MissingNumber(self,a,n):
+        # code here
+        sum1=0
+        total=n*(n+1)//2
+        sum1=sum(a)
+        return (total-sum(a))
+     
