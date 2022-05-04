@@ -1,0 +1,7 @@
+#Remove duplicate element from sorted array
+
+class Solution:	
+	def remove_duplicate(self, A, N):
+		# code here
+		A[:]=sorted(set(A))
+		return len(A)
