@@ -1,0 +1,14 @@
+#count the number of possible triangles
+class Solution:
+    
+    def findNumberOfTriangles(self, arr, n):
+        
+        arr.sort()
+        ans = 0
+        for i in range(n):
+            k = i + 2
+            for j in range(i+1,n):
+                while k < n and arr[k] < arr[i] + arr[j]:
+                    k +=1
+                ans += k - (j + 1)
+        return ans
