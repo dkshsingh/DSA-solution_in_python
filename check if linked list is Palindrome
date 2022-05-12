@@ -1,0 +1,10 @@
+#check if linked list is palindrome
+
+class Solution:
+    def isPalindrome(self, head):
+        list = []
+        while head is not None:
+            list.append(head.data)
+            head = head.next
+        return 1 if list==list[::-1] else 0
+       
