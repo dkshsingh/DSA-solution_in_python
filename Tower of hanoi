@@ -1,0 +1,11 @@
+#tower of hanoi
+class Solution:
+    def toh(self, N, fromm, to, aux):
+        # Your code here
+        if N==1:
+            print("move disk " +str(1)+ " from rod " +str(fromm)+ " to rod " +str(to))
+            return 1
+        self.toh(N-1, fromm, aux, to)
+        print("move disk " +str(N)+ " from rod " +str(fromm)+ " to rod " +str(to))
+        self.toh(N-1, aux, to, fromm)
+        return 2**N-1
