@@ -1,0 +1,10 @@
+class Solution:
+	def removeDups(self, S):
+		# code here
+		a=""
+        l=[]
+        for i in S:
+            if i not in l:
+                a+=i
+                l.append(i)
+        return a
