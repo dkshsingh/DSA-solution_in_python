@@ -1,0 +1,17 @@
+class Solution:
+    def longestCommonSubstr(self, S1, S2, n, m):
+        dp=[[0 for _ in range(len(S1))] for _ in range(len(S2))]
+        ans=float('-inf')
+        for i in range(len(dp)):
+            for j in range(len(dp[0])):
+                if i==0:
+                    if S1[j]==S2[i]:
+                        dp[i][j]=1
+                    ans=max(ans,dp[i][j])
+                elif i>0:
+                    if S1[j]==S2[i] and dp[i-1][j-1]!=0:
+                        dp[i][j]=1+dp[i-1][j-1]
+                    elif S1[j]==S2[i]:
+                        dp[i][j]=1
+                    ans=max(ans,dp[i][j])
+        return ans
