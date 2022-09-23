@@ -1,0 +1,8 @@
+## palindrome string
+#User function Template for python3
+class Solution:
+	def isPalindrome(self, str):
+		for i in range(0, int(len(str)/2)):
+            if str[i] != str[len(str)-i-1]:
+                return 0
+        return 1
