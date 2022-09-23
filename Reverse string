@@ -1,0 +1,8 @@
+#Reverse a string
+#User function Template for python3
+
+def reverseWord(s):
+    str = ""
+    for i in s:
+        str = i + str
+    return str
